@@ -16,11 +16,11 @@ app.get("/api/message", (req, res) => {
 });
 
 // Serve React build files
-app.use(express.static(path.join(__dirname, "..client/build")));
+app.use(express.static(path.join(__dirname, "../client/build")));
 
 // React Catch-All Route (MUST be last)
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
 // Start server
