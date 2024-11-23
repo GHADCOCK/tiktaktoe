@@ -4,13 +4,13 @@ const cors = require("cors");
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3000;
-
+console.log("SERVER>JS");
 // Middleware
 app.use(cors()); // Enables CORS to allow cross-origin requests
 app.use(express.json()); // Parses JSON request bodies
 
 // API Routes (Define before static middleware)
-app.get("https://tiktaktoe-kttp.onrender.com/api/message", (req, res) => {
+app.get("/api/message", (req, res) => {
   console.log("ASDJIODSJFOISDJF");
   res.json({ message: "Hello from the server! F YA" });
 });
